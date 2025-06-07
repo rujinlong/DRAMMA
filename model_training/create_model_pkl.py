@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import matplotlib as mpl
 mpl.use('Agg')
 from AMR_model import AMRModel
