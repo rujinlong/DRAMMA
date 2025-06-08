@@ -84,9 +84,9 @@ if __name__ == '__main__':
     parser.add_argument('--input_path', type=str, help='Insert the full path of the wanted directory with all the assemblies. not needed if --dif_format_paths is supplied.')
     parser.add_argument("--dif_format_paths", nargs='*', type=str,
                         help="The data in the 4 different formats faa,gff,ffn,fa. if we want to only run the pipeline on one sample. if supplied --input_path is not needed.")
-    parser.add_argument('--hmmer_path', type=str, help="full path to the HMMER's hmmsearch program.")
-    parser.add_argument('--mmseqs_path', type=str, help='full path to the Mmseqs2 program.')
-    parser.add_argument('--tmhmm_path', type=str, help='full path to the tmhmm program.')
+    parser.add_argument('--hmmer_path', type=str, default='hmmsearch', help="full path to the HMMER's hmmsearch program.")
+    parser.add_argument('--mmseqs_path', type=str, default='mmseqs', help='full path to the Mmseqs2 program.')
+    parser.add_argument('--tmhmm_path', type=str, default='tmhmm', help='full path to the tmhmm program.')
     parser.add_argument('--feature_dir', type=str, help='the path to the directory we want to save our features in, default: "features" (new sub directory of current directory)', default='features')
     parser.add_argument("-k", "--kmer", type=int, default=4, help="It will run the kmers count from 2 to k, default=4")
     parser.add_argument("-lt", "--label_threshold", type=str, default="1e-10",
